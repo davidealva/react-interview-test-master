@@ -1,14 +1,14 @@
 import React from "react";
 import Search from "./Search";
 import Card from "./Card";
-import { Container, Title } from "./styles";
+
 
 const Main = () => (
-  <Container>
-    <Title>NBA Interview</Title>
+  <div>
+    <h2>NBA Interview</h2>
     <Search />
     <Card />
-  </Container>
+  </div>
 )
 
 export default Main;

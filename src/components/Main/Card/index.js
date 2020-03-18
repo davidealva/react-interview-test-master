@@ -1,12 +1,32 @@
-import React from "react";
-import { Container, Name, PlayerImg, Team } from "./styles";
+import React, { Component }  from "react";
+import { connect } from "react-redux";
+import { getPlayers } from "../../../actions/playerActions";
 
-const Card = () => (
-	<Container>
-		<Name>Gordon "Snake" Hayward</Name>
-		<PlayerImg src="http://localhost:3008/gordon_hayward.png" alt="player_image" />
-		<Team>Boston Celtics</Team>
-	</Container>
-);
+class Card extends Component {
+	componentDidMount() {
+		this.props.getPlayers(); 
+	}
 
-export default Card;
+	render() {
+		console.log(this.props.players)
+
+		const players = this.props.players;
+		return (
+			<div>
+				<ul>
+					{players.map(player => (
+						<li key={player.id}>{player.name}</li>
+					))}
+				</ul>
+			</div>
+		);
+	}
+};
+
+
+const mapStateToProps = state => {
+  return {
+		players: state.reducer.players
+  };
+};
+export default connect(mapStateToProps, { getPlayers }) (Card);
