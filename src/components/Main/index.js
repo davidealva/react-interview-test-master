@@ -1,13 +1,16 @@
 import React from "react";
 import Search from "./Search";
-import Card from "./Card";
-
+import PlayerCard from "./Card";
 
 const Main = () => (
   <div>
-    <h2>NBA Interview</h2>
-    <Search />
-    <Card />
+    <nav className="level">
+      <h1 className="level-item has-text-centered is-size-1">NBA Interview</h1>
+    </nav>
+    <div className="container">
+      <Search />
+      <PlayerCard />
+    </div>
   </div>
 )
 

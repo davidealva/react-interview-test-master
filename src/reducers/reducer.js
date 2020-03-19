@@ -1,8 +1,8 @@
-import { GET_PLAYERS } from "../actions/types";
+import { GET_PLAYERS, GET_TEAMS } from "../actions/types";
 
 const initialState = {
   players: [],
-  team: ''
+  teams: []
 };
 
 export default function reducer (state = initialState, action) {
@@ -12,6 +12,11 @@ export default function reducer (state = initialState, action) {
         ...state,
         players: action.payload 
       };
+      case GET_TEAMS:
+        return {
+          ...state,
+          teams: action.payload 
+        };
       default:
         return state;
   }
