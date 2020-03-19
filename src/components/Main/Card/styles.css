@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 .flex-row-container > .flex-row-item {
-  flex: 0 0 30%; /*grow | shrink | basis */
+  flex: 0 0 19%; /*grow | shrink | basis */
   margin-top: 20px;
   box-sizing: border-box;
 }

@@ -2,7 +2,8 @@ import { GET_PLAYERS, GET_TEAMS } from "../actions/types";
 
 const initialState = {
   players: [],
-  teams: []
+  teams: [], 
+  value:''
 };
 
 export default function reducer (state = initialState, action) {
